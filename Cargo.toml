@@ -1,0 +1,19 @@
+[package]
+name = "grapl-graph-descriptions-py"
+version = "0.1.5"
+authors = ["Insanitybit <insanitybit@gmail.com>"]
+edition = "2018"
+
+description = "Python bindings to Grapls graph descriptions library"
+license = "MIT"
+
+[lib]
+name = "grapl_graph_descriptions_py"
+crate-type = ["lib", "cdylib"]
+
+[dependencies]
+grapl-graph-descriptions = "0.2.5"
+
+[dependencies.pyo3]
+version = "0.8.4"
+features = ["extension-module"]
