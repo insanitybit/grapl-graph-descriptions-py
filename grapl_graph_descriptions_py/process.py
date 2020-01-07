@@ -18,6 +18,7 @@ class ProcessBuilder(object):
         self.asset_id = None  # type: Optional[str]
         self.hostname = None  # type: Optional[str]
         self.process_id = 0
+        self.state = None
         self.process_guid = ""
         self.created_timestamp = 0
         self.terminated_timestamp = 0
@@ -32,6 +33,10 @@ class ProcessBuilder(object):
 
     def with_process_id(self, process_id: int) -> 'ProcessBuilder':
         self.process_id = process_id
+        return self
+
+    def with_state(self, state: ProcessState):
+        self.state = state
         return self
 
     def with_process_guid(self, process_guid: int) -> 'ProcessBuilder':
@@ -75,6 +80,7 @@ class ProcessBuilder(object):
             process_name=self.process_name,
             process_command_line=self.process_command_line,
             operating_system=self.operating_system,
+            state=self.state,
         )
 
 
