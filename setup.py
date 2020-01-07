@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="grapl_graph_descriptions_py",
-    version="0.1.0",
+    version="0.1.1",
     description="Library for describe Grapl graphs",
     url="https://github.com/insanitybit/grapl-graph-descriptions-py/",
     author="insanitybit",
